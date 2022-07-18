@@ -7,34 +7,46 @@
     tools:context=".SecondPage">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
-        android:layout_width="0dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/label"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="72dp"
+
+        android:maxWidth="100dp"
+        android:minWidth="300dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:endIconMode="password_toggle"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
+            android:id="@+id/textField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:hint="@string/satuan"
+            android:inputType="none"
 
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-
-    style="@style/Widget.MaterialComponents.TextInputLayout.*.ExposedDropdownMenu"
-        >
-
-    <AutoCompleteTextView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/materialTV"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="none"
-        />
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="448dp"
+        android:text="Material"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-</com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="378dp"
+        android:text="Android"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

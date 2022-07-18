@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Material</string>
     <string name="label">Label</string>
+    <string name="satuan">Satuan</string>
 </resources>
