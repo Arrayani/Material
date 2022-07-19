@@ -6,6 +6,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import com.gamecodeschool.material.databinding.ActivitySecondPageBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class SecondPage : AppCompatActivity() {
     private lateinit var binding: ActivitySecondPageBinding
@@ -68,5 +69,24 @@ class SecondPage : AppCompatActivity() {
             }
         }
 
+        val showDialog = binding.showDialog
+        showDialog.setOnClickListener {
+            //MaterialAlertDialogBuilder(this)
+            MaterialAlertDialogBuilder(this,
+                R.style.ThemeOverlay_MaterialComponents)
+                //R.style.ThemeOverlay_MaterialComponents_Dialog_Alert)
+                .setTitle("Perhatian")
+                .setMessage("Anda akan delete data item dari database")
+                .setNeutralButton("Jangan dong"){dialog,which ->
+                    Toast.makeText(this,"ini tombol neutral",Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton("Cancel"){dialog,which ->
+                    Toast.makeText(this,"ini tombol Negative",Toast.LENGTH_SHORT).show()
+                }
+                .setPositiveButton("delete"){dialog,which ->
+                    Toast.makeText(this,"ini tombol Positive",Toast.LENGTH_SHORT).show()
+                }
+                .show()
+        }
     }
 }
